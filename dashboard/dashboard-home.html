@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/global.css">
+    <link rel="stylesheet" href="../stylesheet/dashboard.css">
+</head>
+<body>
+    <nav class="nav headerNav">
+        <!-- Mobile Nav Toggle -->
+        <button class="navOpenBtn" aria-label="Open Navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 
+                        14.3 32 32s-14.3 32-32 32L32 128C14.3 
+                        128 0 113.7 0 96zM0 256c0-17.7 14.3-32 
+                        32-32l384 0c17.7 0 32 14.3 32 32s-14.3 
+                        32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 
+                        416c0 17.7-14.3 32-32 32L32 448c-17.7 
+                        0-32-14.3-32-32s14.3-32 32-32l384 
+                        0c17.7 0 32 14.3 32 32z"></path>
+            </svg>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <svg width="240" height="40" viewBox="0 0 350 60" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .brand { font: bold 32px sans-serif; fill: #FF5E29; }
+                    .by { font: 16px sans-serif; fill: #000; }
+                    .labsBox { font: bold 16px sans-serif; fill: #FF5E29; }
+                    .labsText { font: 16px sans-serif; fill: #000; }
+                </style>
+                <text x="0" y="40" class="brand">TrafficMatrics</text>
+                <text x="220" y="40" class="by">by</text>
+                <rect x="260" y="20" width="35" height="25" rx="2" ry="2" 
+                    stroke="#FF5E29" fill="none" stroke-width="2"></rect>
+                <text x="268" y="38" class="labsBox">SR</text>
+                <text x="315" y="40" class="labsText">Labs</text>
+            </svg>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+
+            <button class="navCloseBtn" aria-label="Close Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 
+                            4.1L192 206 56.6 43.5C45.3 29.9 25.1 
+                            28.1 11.5 39.4S-3.9 70.9 7.4 
+                            84.5L150.3 256 7.4 427.5c-11.3 
+                            13.6-9.5 33.8 4.1 45.1s33.8 
+                            9.5 45.1-4.1L192 306 327.4 
+                            468.5c11.3 13.6 31.5 15.4 45.1 
+                            4.1s15.4-31.5 4.1-45.1L233.7 
+                            256 376.6 84.5z"></path>
+                </svg>
+            </button>
+
+            <li><a class="link-hover" href="/">Home</a></li>
+            <li><a class="link-hover" href="/stores">Stores</a></li>
+            <li><a class="link-hover" href="/blog">Blog</a></li>
+            <li><a class="link-hover" href="/category">Category</a></li>
+        </ul>
+
+        <!-- Header Buttons -->
+        <div class="headerBtns">
+            <a href="/login" class="btnLogin">Login</a>
+            <a href="/register" class="btnRegister">Get Started</a>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <div>
+                <div class="sc-eDvSVe jifbFL">
+                    <span class="sc-hLBbgP gAvAzt">
+                        <input type="text" placeholder="Search Store" name="" 
+                            class="sc-gswNZR hZKXxZ" value="">
+                        <span class="sc-dkrFOg hxYWBf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                                fill="#2f3c97" class="fa fa-search search-icon" viewBox="0 0 20 20">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 
+                                        0-1.397 1.398h-.001q.044.06.098.115l3.85 
+                                        3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 
+                                        1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 
+                                        1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                            </svg>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <aside class="dashbaordSideBar">
+        <div class="add-project" data-bs-toggle="modal" data-bs-target="#websiteModal">+ Add Project</div>
+        <div class="menuBox">
+            <ul class="menu">
+                <li><a href="#">Dashboard</a></li>
+                <li> <a href="#">AI Search Visibility</a> <span class="new-badge">NEW!</span></li>
+                <li> <a href="#">Site Audit</a></li>
+                <li><a href="#">SEO Opportunities</a></li>
+                <li> <a href="#">Rank Tracking</a></li>
+                <li> <a href="#">Competitor Analysis</a></li>
+            
+            </ul>
+            <div class="divider">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-list-search "><path d="M15 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M18.5 18.5l2.5 2.5"></path><path d="M4 6h16"></path><path d="M4 12h4"></path><path d="M4 18h4"></path></svg></span>
+                <span>Keyword Research</span>
+            </div>
+            <ul class="menu">
+                <li> <a href="#">Keyword Overview</a></li>
+                <li> <a href="#">Bulk Analysis</a></li>
+                <li> <a href="#">Keywords Generator</a></li>
+                <li> <a href="#">Keyword Lists</a></li>
+                <li> <a href="#">Keyword Visualization</a></li>
+            </ul>
+            <div class="divider">
+                <span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        class="tabler-icon tabler-icon-activity"
+                        >
+                        <path d="M3 12h4l3 8l4 -16l3 8h4" />
+                    </svg>
+                </span>
+                <span>Competitive Research</span>
+            </div>
+            <ul class="menu">
+                <li class="active"> <a href="#">Traffic Overview</a></li>
+                <li> <a href="#">Bulk Analysis</a></li>
+            </ul>
+        </div>
+        <div class="trial-box">
+            <h3>Free trial available</h3>
+            <ul>
+                <li>Track more keywords</li>
+                <li>Increase daily limits</li>
+                <li>Get more search results</li>
+            </ul>
+            <button class="trial-btn">Start a 7-Day Trial</button>
+        </div>
+    </aside>
+    <div class="dashboardContent">
+          <section class="dashboardSearch">
+              <div class="dashboardHome">
+                  <div class="badge">Dashboard</div>
+                  <h1>Add your domain to<br/>start growing your traffic</h1>
+                  <p>Stop Guessing. Grow your traffic today.</p>
+
+                    <div class="form-wrapper">
+                      <div class="startBox">
+                          <span class="start-here">START HERE!</span>
+                           <svg class="tw-ml-12" width="55" height="21" viewBox="0 0 55 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                            d="M1.50008 2.50021C7.5 15.0002 40.8161 16.378 51.0063 10.8953"
+                            stroke="#FF5E29"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            />
+                            <path
+                            d="M43.0421 7.43279C46.4885 9.46115 47.1187 10.2375 53.2657 10.965"
+                            stroke="#FF5E29"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            />
+                            <path
+                            d="M45.7605 19.2146C47.9816 15.3067 49.5344 14.0462 53.2651 10.9648"
+                            stroke="#FF5E29"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            />
+                            </svg>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Enter your website"/>
+                      <button class="btn">Add Website</button>
+                   </div>
+              </div>
+              <div class="container searchProcess">
+                <div class="row">
+                  <!-- Left Section --> 
+                  <div class="col-md-5">
+                    <div class="step">
+                      <div class="stepBox">
+                          <div class="number">1</div>
+                          <div class="stepContent">
+                                <h2>Add your website</h2>
+                                <p class="desc">Unlock free SEO tips and quick wins to rank-up</p>
+                          </div>
+                      </div>
+                      <svg class="tw-w-full" width="100%" preserveAspectRatio="none" height="25" viewBox="0 0 300 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.3" d="M0 0.25L150 23.25L300 0.25V1.25L150 24.25L0 1.25V0.25Z" fill="#FF5E29" />
+                      </svg>
+                    </div>
+                    <div class="step">
+                      <div class="stepBox">
+                          <div class="number">2</div>
+                          <div>
+                                <h2>Add keywords</h2>
+                                <p class="desc">Upload in bulk and track what’s working</p>
+                          </div>
+                      </div>
+                      <svg class="tw-w-full" width="100%" preserveAspectRatio="none" height="25" viewBox="0 0 300 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.3" d="M0 0.25L150 23.25L300 0.25V1.25L150 24.25L0 1.25V0.25Z" fill="#FF5E29" />
+                      </svg>
+                    </div>
+                    <div class="step">
+                      <div class="stepBox">
+                            <div class="number">3</div>
+                            <div>
+                                <h2>Add competitors</h2>
+                                <p class="desc">Spy and rank higher than them on Google</p>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+
+                 <!-- Right Section --> 
+                  <div class="col-md-7">
+                    <img
+                          src='../images/dashboard-preview.png'
+                          alt="Dashboard Screenshot" 
+                    />
+                  </div>
+                </div>
+              </div>
+          </section>
+          <section class="subscribeBox">
+            <h2>Add SEO power to your website today</h2>
+            <p>Unlock free SEO tips and quick wins to rank-up</p>
+            <div class="formBox">
+              <input type="text" placeholder="Enter your website" />
+              <button>Add Website</button>
+            </div>
+          </section>
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg width="240" height="40" viewBox="0 0 350 60" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .brand { font: bold 32px sans-serif; fill: #FF5E29; }
+                            .by { font: 16px sans-serif; fill: #000; }
+                            .labsBox { font: bold 16px sans-serif; fill: #FF5E29; }
+                            .labsText { font: 16px sans-serif; fill: #000; }
+                        </style>
+                        <text x="0" y="40" class="brand">TrafficMatrics</text>
+                        <text x="220" y="40" class="by">by</text>
+                        <rect x="260" y="20" width="35" height="25" rx="2" ry="2"
+                            stroke="#FF5E29" fill="none" stroke-width="2"></rect>
+                        <text x="268" y="38" class="labsBox">SR</text>
+                        <text x="315" y="40" class="labsText">Labs</text>
+                    </svg>
+                </div>
+
+                <p>
+                    Unlock the full potential of your website with our comprehensive SEO Portal,
+                    designed to empower businesses and marketers with cutting-edge tools for keyword
+                    research, backlink tracking, and traffic analytics.
+                </p>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+
+                <div>
+                    <h4>Shop</h4>
+                    <a href="#">Medicines &amp; Essentials</a>
+                    <a href="#">Wellness Products</a>
+                    <a href="#">Personal Care</a>
+                    <a href="#">Fitness &amp; Nutrition</a>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <a href="#">Health Checkup Packages</a>
+                    <a href="#">Doctor Consultations</a>
+                    <a href="#">Lab Tests</a>
+                    <a href="#">Pharmacy Offers</a>
+                </div>
+
+                <div>
+                    <h4>Support</h4>
+                    <a href="#">FAQs</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copybox">
+            <p class="copyright text-center">
+                © 2025 TrafficMatrics All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="../js/global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
