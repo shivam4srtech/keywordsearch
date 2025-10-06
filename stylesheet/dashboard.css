@@ -516,7 +516,6 @@ color: var(--secondary-color);
 }
 /* table container */
 .tableContainer{
-  min-width: 800px;
   overflow: auto;
 }
 .tableContainer table {
@@ -748,7 +747,9 @@ margin-bottom: 2.2rem;
 @media(max-width:991px){
   .dashboardContent input[type="text"] {
       width: 100%;
-      
+    }
+    .dashbaordSideBar{
+      display: none;
     }
     
 }
@@ -1042,4 +1043,171 @@ margin-bottom: 2.2rem;
 }
 .selectedbtnContainer{
   padding: .5rem;
+}
+.customeDropDownBox{
+ display: flex;
+ margin-bottom: 1rem;
+ gap: 10px;
+ 
+}
+.customeDropDownBox .custom-dropdown{
+  max-width: 200px;
+}
+.customeDropDownBox .custom-dropdown .dropdown-selected{
+  border-radius: 0;
+}
+.customeDropDownBox .custom-dropdown .dropdown-list  {
+  border-radius: 0;
+}
+.customeDropDownBox .custom-dropdown .dropdown-selected {
+
+  gap: 5px;
+  font-size: .8rem;
+}
+.seoDifficulty{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.seoDifficulty:hover{
+  color: var(--secondary-color);
+}
+.seoDifficulty .circle{
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+.seoDifficulty .difficultiMode{
+ display: flex;
+ gap: 10px;
+}
+
+.dropdown-list .txtArea{
+  padding: .5rem;
+}
+.dropdown-list .txtArea textarea{
+  max-width: 100%;
+  height: 5rem;
+  outline: none;
+  font-weight: 500;
+  font-size: .8rem;
+  padding: .2rem;
+  border-radius: 0;
+  width: 100%;
+}
+.dropdown-list .txtArea textarea:focus{
+ border: 1px solid var(--secondary-color);
+}
+@media(max-width:600px){
+   .customeDropDownBox{
+    flex-direction: column;
+   }
+  .customeDropDownBox .custom-dropdown{
+    max-width: 100%;
+  }
+}
+.customeCheck input[type="checkbox"]{
+ width:15px;
+height:15px;
+border-radius: 0;
+}
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Custom box */
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0; /* use 50% for round */
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+/* Hover effect */
+.custom-checkbox:hover .checkmark {
+  border-color: #888;
+}
+
+/* Checked state */
+.custom-checkbox input:checked + .checkmark {
+  background-color: #ff5e29;
+  border-color: #ff5e29;
+}
+
+/* Tick mark */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Show tick when checked */
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+}
+.searchResult{
+  margin-top: .5rem;
+}
+.searchResult button{
+  outline: none;
+  font-weight: 500;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  padding: .3rem .5rem;
+  background-color: transparent;
+}
+.seodifficultyBox{
+  background-color: #faefdb;
+  display: flex;
+  gap: 5px;
+  min-height: 30px;
+  align-items: center;
+  padding: .5rem;
+  justify-content: space-between;
+}
+.seodifficultyBox span:nth-of-type(1){
+  color: #000;
+  font-size: .8rem;
+}
+.seodifficultyBox span:nth-of-type(2){
+  color: #000;
+  font-size: .6rem;
+  color: #666
+}
+.seodifficultyBox span:nth-of-type(3) button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.seodifficultyBox span:nth-of-type(3) button img{
+ width: 20px;
+ object-fit: contain;
+}
+.customeDropDownBox.coloredBorder .custom-dropdown .dropdown-selected {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: .8rem;
+  text-transform: uppercase;
 }

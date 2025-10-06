@@ -644,6 +644,7 @@ line-height: 1.4;
   cursor: pointer;
   background: #fff;
   transition: all 0.2s ease;
+  font-weight: 500;
 }
 
 .custom-dropdown .dropdown-selected img {
