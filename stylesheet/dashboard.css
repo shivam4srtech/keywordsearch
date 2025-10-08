@@ -527,7 +527,7 @@ color: var(--secondary-color);
 }
 
 .tableContainer thead {
-  background: #f8f8f8;
+  background: #f2f2f2;
 }
 
 .tableContainer th,
@@ -537,12 +537,26 @@ color: var(--secondary-color);
   text-align: left;
   max-width: 200px;
   min-width: 50px;
+  vertical-align: top;
 }
-
+.tableContainer .viewDtl{
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+}
+.tableContainer .viewDtl svg{
+  width: 16px;
+}
 .tableContainer th {
   color: #000;
   font-weight: 600;
   font-size: .7rem;
+}
+.tableContainer table tbody tr:nth-child(odd){
+ background-color: #f8f8f8;
 }
 
 
@@ -557,6 +571,20 @@ color: var(--secondary-color);
   color: #ff5a2c;
   text-decoration: none;
   font-weight: 500;
+}
+.tableContainer .checkOk{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #bcf4dd;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+.tableContainer .checkOk svg{
+ width: 14px;
+ fill: #45d69b;
 }
 
 .tableContainer td a:hover {
@@ -1204,6 +1232,14 @@ border-radius: 0;
  width: 20px;
  object-fit: contain;
 }
+.coloredBorder {
+  align-items: center;
+}
+.coloredBorder .isselected{
+  font-weight: 500;
+  font-size: .8rem;
+  color: rgb(209, 215, 217);
+}
 .customeDropDownBox.coloredBorder .custom-dropdown .dropdown-selected {
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
@@ -1620,3 +1656,362 @@ border-radius: 0;
      color: #000;
      font-size: .8rem;
     }
+    .breadcrumb ul{
+      display: flex;
+      gap: 6px
+    }
+    .breadcrumb ul li{
+       font-weight: 600;
+       font-size: .8rem;
+    }
+     .breadcrumb ul li a{
+       color: #000;
+       text-decoration: underline;
+       text-decoration-thickness: 1.5px;
+    }
+.text-left{
+  text-align: left !important;
+}
+.chartTabwrapper .text-left{
+  max-width: fit-content!important;
+}
+/* keyword generator */
+.keywordGenerator {
+  font-weight: 500;
+}
+
+.keywordGenerator h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.keywordGenerator .steps {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.keywordGenerator .steps:nth-of-type(1) {
+ margin-left: 0;
+}
+
+.keywordGenerator .step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: .8rem;
+}
+.keywordGenerator .step:nth-of-type(1) {
+ margin-left: 0;
+}
+
+.keywordGenerator .step.completed {
+  color: #00a878;
+}
+
+.keywordGenerator .step.active {
+  color: #ff5a3c;
+}
+
+.keywordGenerator .step .circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 8px;
+  background: #e6e6e6;
+  color: #555;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.keywordGenerator .step.completed .circle {
+  background: #00a878;
+  color: #fff;
+}
+
+.keywordGenerator .step.active .circle {
+  background: #ff5a3c;
+  color: #fff;
+}
+
+.keywordGenerator .step svg {
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+}
+
+.keywordGenerator .line {
+  flex: 1;
+  height: 2px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+.keywordGenerator .form-step {
+  display: none;
+}
+
+.keywordGenerator .form-step.active {
+  display: block;
+}
+
+.keywordGenerator .box {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.keywordGenerator .note {
+  background: #f9f9f9;
+  border-left: 4px solid #ff9a3c;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.keywordGenerator .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.keywordGenerator button {
+  background: #ff5a3c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.keywordGenerator button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.keywordGenerator button:hover:not(:disabled) {
+  background: #ff784f;
+}
+
+.keywordGenerator .flag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+}
+.keywordGenerator .angle svg{ 
+  width: 24px;
+  fill: #555;
+}
+.keywordGenerator .completed .angle svg{ 
+  fill: #00a878;
+}
+.keywordGenerator .box h3{
+  font-weight: 600;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+.keywordGenerator .domainName{
+  box-shadow: none;
+  font-weight: 500;
+  font-size: .8rem;
+  border-radius: 0;
+}
+.keywordGenerator  p{
+  font-size: .9rem;
+}
+/* keyword progress */
+.keywordProgress h2 {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.keywordProgress h2::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-top-color: #00a878;
+  animation: keywordProgress-spin 1s linear infinite;
+}
+
+@keyframes keywordProgress-spin {
+  to { transform: rotate(360deg); }
+}
+
+.keywordProgress p.subtitle {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.keywordProgress .progressSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.keywordProgress .progressStep {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.keywordProgress .progressStep:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  width: 2px;
+  height: calc(100% - 10px);
+  background: #e0e0e0;
+  z-index: 0;
+}
+
+.keywordProgress .circle {
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.keywordProgress .progressStep.completed .circle {
+  border-color: #00a878;
+  background: #00a878;
+}
+
+.keywordProgress .progressStep.active .circle {
+  border-color: #ff6600;
+  border-top-color: #ccc;
+  animation: keywordProgress-spin 1s linear infinite;
+}
+
+.keywordProgress .progressStep.completed .circle svg {
+  fill: #fff;
+}
+
+.keywordProgress .progressStep span {
+  font-size: 15px;
+  color: #333;
+}
+
+.keywordProgress .progressStep.completed span {
+  color: #000;
+  font-weight: 500;
+}
+/* keyword result */
+.keywordResult h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.keywordResult h2 span {
+  font-weight: 500;
+  color: #777;
+  font-size: 15px;
+}
+
+.keywordResult .keywordSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.keywordResult .keywordBox {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  overflow-y: auto;
+  height: 240px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.keywordResult .keywordBox::-webkit-scrollbar {
+  width: 8px;
+}
+.keywordResult .keywordBox::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+
+.keywordResult h3 {
+  font-size: 14px;
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #999;
+  padding-bottom: .5rem;
+}
+
+.keywordResult ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.keywordResult li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  color: #333;
+}
+
+.keywordResult li:last-child {
+  border-bottom: none;
+}
+
+.keywordResult .exportBtn {
+  display: inline-block;
+  margin-top: 25px;
+  background: transparent;
+  border: 2px solid #ff5722;
+  color: #ff5722;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 28px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.keywordResult .exportBtn:hover {
+  background: #ff5722;
+  color: #fff;
+}

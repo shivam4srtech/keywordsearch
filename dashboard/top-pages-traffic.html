@@ -155,29 +155,12 @@
     </aside>
     <div class="dashboardContent">
           <form class="searchBox row">
-              <div class="col-lg-5">
+              <div class="col-lg-7">
                   <div class="inputset">
                     <input type="text" class="form-control" placeholder="Enter a domain or URL (ie. hello.com or hello.com/blogs ) " />
                   </div>
               </div>
-              <div class="col-lg-2">
-                  <div class="inputset">
-                     <div class="custom-dropdown">
-                        <div class="dropdown-selected form-control">
-                         
-                            <span>Domain</span>
-                            <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1L6 6L11 1" stroke="#555" stroke-width="2" fill="none"/></svg>
-                        </div>
-                        <div class="dropdown-list">
-                            
-                            <ul>
-                                <li data-value="domain">Domain</li>
-                                <li data-value="exact URL">Exact URL</li>
-                            </ul>
-                        </div>
-                    </div>
-                  </div>
-              </div>
+             
              <div class="col-lg-3">
                   <div class="inputset">
                     <div class="custom-dropdown">
@@ -223,7 +206,7 @@
           </div>
           <!-- {/*  */} -->
           <div class="h1Box">
-            <h1><strong>Traffic Overview:</strong>https://mn-nice-ethnobotanicals.com/</h1>
+            <h1><strong>Top Pages by Traffic :</strong>scoopreview.com</h1>
             <div class="dnwlFeedback">
                <a href="#"> 
                   <img
@@ -253,207 +236,39 @@
                </a>
             </div>
           </div>
-          <!-- {/*  */} -->
-          <div class="traffixCardBox">
-            <div class="row row-cols row-cols-md-2 row-cols-1">
-            
-              <div class="col mb-4 mobilePadZero">
-                <div class="trafficCard">
-                  <div class="mb-4">
-                    <div class="key">Traffic</div>
-                    <h2>0</h2>
-                  </div>
-                  <div class="mb-4">
-                      <div class="key">Organic </div>
-                      <h2>0</h2>
-                  </div>
-                  <div class="mb-4">
-                      <div class="key">Paid </div>
-                      <h2>1,253</h2>
-                  </div>
+          <div class="customeDropDownBox coloredBorder">
+            <div class="custom-dropdown">
+                <div class="dropdown-selected form-control">
+                    
+                    <span>Export to CSV</span>
+                    <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1L6 6L11 1" stroke="#555" stroke-width="2" fill="none"></path></svg>
                 </div>
-              </div>
-              <div class="col mb-4 mobilePadZero">
-                <div class="trafficCard">
-                    <div id="donutChart1"></div>
-                     <div class="flex flex-col mt-4 space-y-2">
-                        <div class="charflexLegend" style="border-bottom: 1px solid #bcbebeff;">
-                            <div class="sqrbox"> <span class="sqr" style="background-color: #7d44b5;"></span> <span>Organic</span></div>
-                            <span class="value"> 80%</span>
-                        </div>
-                        <div class="charflexLegend">
-                        <div class="sqrbox"> <span class="sqr" style="background-color: #e77a4a;"></span> <span>Paid</span></div>
-                        <span class="value"> 20%</span>
-                        </div>
-                    </div>
+                <div class="dropdown-list">
+                    <ul>
+                        <li data-value="1">Export All</li>
+                        <li data-value="2">Export Selected</li>
+                    </ul>
                 </div>
-              </div>
-              <!-- {/* Organic Keywords */} -->
-              <div class="col mb-4 mobilePadZero">
-                <div class="trafficCard">
-                  <div class="key">ORGANIC KEYWORDS</div>
-                  <h2>1,253</h2>
-                </div>
-              </div>
-
-              <!-- {/* Domain Authority */} -->
-              <div class="col mb-4 mobilePadZero">
-                <div class="trafficCard">
-                  <div class="key">DOMAIN AUTHORITY</div>
-                  <h2>17</h2>
-                </div>
-              </div>
-
-              <!-- {/* Paid Keywords */} -->
-              <div class="col mb-4 mobilePadZero">
-                <div class="trafficCard">
-                  <div class="key">PAID KEYWORDS</div>
-                  <h2>0</h2>
-                </div>
-              </div>
-
-              <!-- {/* Backlinks */} -->
-              <div class="col mb-4 mobilePadZero">
-                <div class="trafficCard">
-                  <div class="key">BACKLINKS</div>
-                  <h2>
-                    11,208 <span class="cardBadge success-badge">GOOD</span>
-                  </h2>
-                  <small>NoFollow: 7,013</small>
-                </div>
-              </div>
             </div>
-          </div>
-          <!-- {/* multi graphs */} -->
-          <div class="chartTabwrapper mb-3">
-              <div class="flexHeader">
-                  <h2 class="sectionHeading">BACKLINKS OVER TIME</h2>
-              </div>
-
-               <!-- Nav Tabs --> 
-              <ul class="nav nav-tabs border-0" id="chartTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="traffic-tab" data-bs-toggle="tab" data-bs-target="#traffic" type="button" role="tab">
-                    ORGANIC TRAFFIC
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="authority-tab" data-bs-toggle="tab" data-bs-target="#authority" type="button" role="tab">
-                    DOMAIN AUTHORITY
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="backlinks-tab" data-bs-toggle="tab" data-bs-target="#backlinks" type="button" role="tab">
-                    BACKLINKS
-                  </button>
-                </li>
-              </ul>
-
-               <!-- Tab Content --> 
-              <div class="tab-content mt-3">
-                <div class="tab-pane fade show active" id="traffic" role="tabpanel">
-                   <div class="text-right flexSqBox">
-                      <div class="flexSq"><span></span>Organic Traffic</div>
-                      <button>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
-                            >
-                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                              <path d="M7 11l5 5l5 -5" />
-                              <path d="M12 4l0 12" />
-                            </svg> 
-                      </button>
-                   </div>
-                   <div id="organicTraffic"></div>
+            <div class="custom-dropdown">
+                <div class="dropdown-selected form-control">
+                    
+                    <span>Copy to Clipboard</span>
+                    <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1L6 6L11 1" stroke="#555" stroke-width="2" fill="none"></path></svg>
                 </div>
-                <div class="tab-pane fade" id="authority" role="tabpanel">
-                    <div class="text-right flexSqBox">
-                      <div class="flexSq"><span style="background-color: #8cb6e0;"></span>Domain Authority</div>
-                        <button>
-                              <svg
-                              
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
-                              >
-                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                                <path d="M7 11l5 5l5 -5" />
-                                <path d="M12 4l0 12" />
-                              </svg> 
-                        </button>
-                    </div>
-                    <div id="domainAuthorityChart"></div>
+                <div class="dropdown-list">
+                    <ul>
+                        <li data-value="">
+                            Copy All
+                        </li>
+                        
+                            <li data-value="">
+                            Copy Selected
+                        </li>
+                    </ul>
                 </div>
-                <div class="tab-pane fade" id="backlinks" role="tabpanel">
-                    <div class="text-right flexSqBox">
-                      <div class="flexSq"><span style="background-color: #f5e368;"></span>Backlinks Traffic</div>
-                      <button>
-                            <svg
-                            
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
-                            >
-                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                              <path d="M7 11l5 5l5 -5" />
-                              <path d="M12 4l0 12" />
-                            </svg> 
-                      </button>
-                    </div>
-                     <div id="backlinksChart"></div>
-                </div>
-              </div>
-          </div>
-          <!-- * keywords * -->
-          <div class="chartTabwrapper mb-3">
-              <div class="flexHeader">
-                  <h2 class="sectionHeading">SEO KEYWORDS RANKING</h2>
-                   <div class="text-right flexSqBox">
-                      <div class="flexSq">1,253 Keywords</div>
-                      <button>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
-                            >
-                              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
-                              <path d="M7 11l5 5l5 -5" />
-                              <path d="M12 4l0 12" />
-                            </svg> 
-                      </button>
-                   </div>
-              </div>
-              <div id="keywordsRanking" style="max-width: 900px; margin: 40px auto;"></div>
+            </div>
+            <span class="isselected">3 of 3 Selected</span>
           </div>
           <!-- /* SEO Pages */ -->
           <div class="chartTabwrapper mb-3">
@@ -489,6 +304,12 @@
                   <table>
                     <thead>
                       <tr>
+                        <th width="50">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </th>
                         <th>SEO TITLE<br />URL</th>
                         <th>EST.<br />VISITS</th>
                         <th>BACKLINKS</th>
@@ -511,51 +332,29 @@
                     </thead>
                     <tbody>
                       <tr>
+                        <th width="50">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </th>
                         <td>
                           <a href="#">Premium Ethnobotanicals for Sale | Free Gifts $100+</a>
                           <br />
                           mn-nice-ethnobotanicals.com/
                         </td>
+                        <td> 
+                            <div>
+                                17
+                            </div>
+                            <div class="searchResult">
+                                <button data-bs-toggle="modal" data-bs-target="#showSearchResult">Search Results</button>
+                          </div>
+                        </td>
                         <td>893</td>
-                        <td>2,596</td>
+                      
                         <td class="facebook">1</td>
                         <td class="pinterest">2</td>
-                        <td class="reddit">0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#">Buy Amanita Muscaria Mushrooms Online | Free Gifts $100+</a>
-                          <br />
-                          mn-nice-ethnobotanicals.com/collections/buy-amanita-muscaria
-                        </td>
-                        <td>247</td>
-                        <td>2</td>
-                        <td class="facebook">0</td>
-                        <td class="pinterest">0</td>
-                        <td class="reddit">0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#">Buy Blue Lotus Products | Free Gifts $100+ | Fast Delivery</a>
-                          <br />
-                          mn-nice-ethnobotanicals.com/collections/buy-blue-lotus
-                        </td>
-                        <td>67</td>
-                        <td>1</td>
-                        <td class="facebook">0</td>
-                        <td class="pinterest">0</td>
-                        <td class="reddit">0</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#">Amanita Regalis vs Amanita Pantherina Differences?</a>
-                          <br />
-                          mn-nice-ethnobotanicals.com/pages/amanita-regalis-vs-amanita-pantherina-differences
-                        </td>
-                        <td>64</td>
-                        <td>0</td>
-                        <td class="facebook">0</td>
-                        <td class="pinterest">0</td>
                         <td class="reddit">0</td>
                       </tr>
                     </tbody>
@@ -663,9 +462,9 @@
                   <div class="lang-box">
                   <div class="lang-text">
                       <Image
-                          src={'/images/us.svg'} 
-                          width={24}
-                          height={24}
+                          src="../images/us.svg"
+                          width="24"
+                          height="24"
                           alt="flag" 
                       />
                       English <span>(United States)</span>
@@ -717,9 +516,9 @@
                   <div class="lang-box">
                       <div class="lang-text">
                           <Image
-                              src={'/images/us.svg'} 
-                              width={24}
-                              height={24}
+                              src="../images/us.svg"
+                              width="24"
+                              height="24"
                               alt="flag" 
                           />
                           English <span>(United States)</span>
@@ -745,7 +544,6 @@
       </div> 
     <footer id="footer">
         <div class="footer-container">
-
             <!-- Brand Section -->
             <div class="footer-brand">
                 <div class="footer-logo">
@@ -816,12 +614,297 @@
             </p>
         </div>
     </footer>
+     <!-- Add website Modal  -->
+      <div class="modal fade customeModal" id="websiteModal" tab-index="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <div>
+                  <h5 class="modal-title">Add your website</h5>
+                  <div class="modal-subtitle">Add website and select where do you want to rank</div>
+                  </div>
+              
+              </div>
+
+              <div class="modal-body">
+                  <input type="text" class="form-control" placeholder="Website URL" />
+
+                  <div class="lang-box">
+                  <div class="lang-text">
+                      <Image
+                          src="../images/us.svg"
+                          width="24"
+                          height="24"
+                          alt="flag" 
+                      />
+                      English <span>(United States)</span>
+                  </div>
+                  <div class="lang-action" data-bs-toggle="modal" data-bs-target="#langAndLocation">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="16">     
+                          <path d="M416.9 85.2L372 130.1L509.9 268L554.8 223.1C568.4 209.6 576 191.2 576 172C576 152.8 568.4 134.4 554.8 120.9L519.1 85.2C505.6 71.6 487.2 64 468 64C448.8 64 430.4 71.6 416.9 85.2zM338.1 164L122.9 379.1C112.2 389.8 104.4 403.2 100.3 417.8L64.9 545.6C62.6 553.9 64.9 562.9 71.1 569C77.3 575.1 86.2 577.5 94.5 575.2L222.3 539.7C236.9 535.6 250.2 527.9 261 517.1L476 301.9L338.1 164z" />
+                      </svg>
+                  </div>
+                  </div>
+
+                  <div class="free-trial">
+                  <a href="#">Start 7-day free trial</a> to add 2 or more locations.
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn-submit">Add Website</button>
+              </div>
+              </div>
+          </div>
+      </div>
+      <!-- Language and location -->
+      <div class="modal fade customeModal" id="langAndLocation" tab-index="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <div>
+                      <h5 class="modal-title">Language and location</h5>
+                      <button class="dismissModal" data-bs-dismiss="modal">X</button>
+                      
+                  </div>
+              
+              </div>
+
+              <div class="modal-body">
+                  <div class="row align-items-center">
+                      <div class="col-md-5">
+                          <div class="custom-dropdown">
+                                <div class="dropdown-selected form-control">
+                                
+                                    <span>Language</span>
+                                    <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1L6 6L11 1" stroke="#555" stroke-width="2" fill="none"></path></svg>
+                                </div>
+                                <div class="dropdown-list">
+                                    <div class="search-box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                            <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"></path>
+                                        </svg>
+                                        <input type="text" placeholder="search Language" class="searchdropdown">  
+                                    </div>
+                                    <ul>
+                                        <li data-value="domain">English</li>
+                                        <li data-value="exact URL">Spanish</li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                      <div class="col-md-5">
+                          <div class="custom-dropdown">
+                                <div class="dropdown-selected form-control">
+                                    <span>Region</span>
+                                    <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1L6 6L11 1" stroke="#555" stroke-width="2" fill="none"></path></svg>
+                                </div>
+                                <div class="dropdown-list">
+                                    <div class="search-box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                            <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"></path>
+                                        </svg>
+                                        <input type="text" placeholder="search country" class="searchdropdown">  
+                                    </div>
+                                    <ul>
+                                        <li data-value="us"><img src="https://flagcdn.com/us.svg" alt="">  US</li>
+                                        <li data-value="in"><img src="https://flagcdn.com/in.svg" alt="">  India</li>
+                                        <li data-value="uk"><img src="https://flagcdn.com/gb.svg" alt="">  UK</li>
+                                    </ul>
+                                </div>
+                            </div>
+                      </div>
+                        <div class="col-md-2">
+                          <button class="addLang">+ ADD</button>
+                      </div>
+                  </div>
+                  <div class="lang-box">
+                      <div class="lang-text">
+                          <img
+                              src="../images/us.svg"
+                              width="24"
+                              height="24"
+                              alt="flag" 
+                          />
+                          English <span>(United States)</span>
+                      </div>
+                      <div class="lang-action" title="delete">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="16" fill='#ff0000'>
+                              <path d="M232.7 69.9L224 96L128 96C110.3 96 96 110.3 96 128C96 145.7 110.3 160 128 160L512 160C529.7 160 544 145.7 544 128C544 110.3 529.7 96 512 96L416 96L407.3 69.9C402.9 56.8 390.7 48 376.9 48L263.1 48C249.3 48 237.1 56.8 232.7 69.9zM512 208L128 208L149.1 531.1C150.7 556.4 171.7 576 197 576L443 576C468.3 576 489.3 556.4 490.9 531.1L512 208z" />
+                          </svg>
+                      </div>
+                  </div>
+
+                  <div class="free-trial">
+                  <a href="#">Start 7-day free trial</a> to add 2 or more locations.
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn-cancel" data-bs-toggle="modal" data-bs-target="#websiteModal">Cancel</button>
+                  <button type="button" class="btn-submit" data-bs-toggle="modal" data-bs-target="#websiteModal">Update</button>
+              </div>
+              </div>
+          </div>
+      </div> 
+      <!-- choose subscription -->
+      <div class="modal fade customeModal" id="choosesebscription" tab-index="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <div>
+                      <h5 class="modal-title">Unlock 10 Free Credits with a Free Account!</h5>
+                      <button class="dismissModal" data-bs-dismiss="modal">X</button>
+                      
+                  </div>
+              
+              </div>
+
+              <div class="modal-body">
+                  
+                 
+
+                  <div class="free-trial">
+                    Looking to update the SEO Difficulty (SD)? Create a free account now and get instant access to 10 free credits to refresh keywords SEO Difficulty.
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn-cancel" data-bs-toggle="modal" data-bs-target="#websiteModal">No Thanks</button>
+                  <button type="button" class="btn-submit" data-bs-toggle="modal" data-bs-target="#websiteModal">Create Free Account</button>
+              </div>
+              </div>
+          </div>
+      </div> 
+       <!-- Show Subscription  -->
+      <div class="modal fade customeModal" id="showSearchResult" tab-index="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tableContainer">
+                        <table>
+                            <thead>
+                                <tr>
+                                   
+                                    <th> Google Search Results</th>
+                                    <th>Est. Visits</th>
+                                    <th>Links</th>
+                                    <th>Domain Authority</th>
+                                    <th>Social Shares</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>
+                                
+                                        <a href="#">panther amanita</a>
+
+                                    </td>
+                                    
+                                    <td>13000</td>
+                                    <td>1</td>
+                                    <td>2424</td>
+                                    <td>
+                                        224
+                                    </td>
+                                    
+                                </tr>
+                                 <tr>
+                                    
+                                    <td>
+                                
+                                        <a href="#">panther amanita</a>
+
+                                    </td>
+                                    
+                                    <td>13000</td>
+                                    <td>1</td>
+                                    <td>2424</td>
+                                    <td>
+                                        224
+                                    </td>
+                                    
+                                </tr>
+                                 <tr>
+                                    
+                                    <td>
+                                
+                                        <a href="#">panther amanita</a>
+
+                                    </td>
+                                    
+                                    <td>13000</td>
+                                    <td>1</td>
+                                    <td>2424</td>
+                                    <td>
+                                        224
+                                    </td>
+                                    
+                                </tr>
+                                 <tr>
+                                    
+                                    <td>
+                                
+                                        <a href="#">panther amanita</a>
+
+                                    </td>
+                                    
+                                    <td>13000</td>
+                                    <td>1</td>
+                                    <td>2424</td>
+                                    <td>
+                                        224
+                                    </td>
+                                    
+                                </tr>
+                                 <tr>
+                                    
+                                    <td>
+                                
+                                        <a href="#">panther amanita</a>
+
+                                    </td>
+                                    
+                                    <td>13000</td>
+                                    <td>1</td>
+                                    <td>2424</td>
+                                    <td>
+                                        224
+                                    </td>
+                                    
+                                </tr>
+                                 <tr>
+                                    
+                                    <td>
+                                
+                                        <a href="#">panther amanita</a>
+
+                                    </td>
+                                    
+                                    <td>13000</td>
+                                    <td>1</td>
+                                    <td>2424</td>
+                                    <td>
+                                        224
+                                    </td>
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                   
+                </div>
+            </div>
+          </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="../appexChart/trafficDonut.js"></script>
-    <script src="../appexChart/organicTraffic.js"></script>
-    <script src="../appexChart/domainAuthorityChart.js"></script>
-    <script src="../appexChart/backlinksChart.js"></script>
-    <script src="../appexChart/keywordRanking.js"></script>
     <script src="../js/global.js"></script>
 </body>
 </html>
