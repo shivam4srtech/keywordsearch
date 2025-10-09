@@ -72,7 +72,7 @@ body{
     .trial-box {
       background-color: #e77a4a30;
       border-radius: 12px;
-      padding: 20px 10px;
+      padding: 10px 10px;
       text-align: center;
       position: relative;
       margin-right:1rem;
@@ -976,6 +976,9 @@ margin-bottom: 2.2rem;
     }
     .customeModal .modal-dialog {
       max-width: 620px;
+    }
+     .customeModal .modal-dialog.largeModal {
+      max-width: 900px;
     }
     .customeModal .lang-box {
       display: flex;
@@ -2142,3 +2145,105 @@ align-items: center;
   font-size: .6rem;
  }
 }
+/* keyword IDEA */
+.keywordIdea {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      padding: 25px;
+      border-radius: 6px;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .keywordIdea h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    .keywordIdea .col-md-3 {
+      border-right: 1px solid #eee;
+    }
+
+    .keywordIdea .col:last-child {
+      border-right: none;
+    }
+
+    .keywordIdea h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #111;
+      text-transform: uppercase;
+    }
+
+    .keywordIdea .count {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1;
+    }
+
+    .keywordIdea .sub-info {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .keywordIdea table {
+      width: 100%;
+    }
+
+    .keywordIdea th {
+      font-size: 13px;
+      font-weight: 600;
+      color: #777;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    .keywordIdea td:nth-of-type(1) {
+      font-size: 14px;
+      color: #111;
+      padding: 6px 0;
+      border: none;
+     
+    }
+     .keywordIdea td:nth-of-type(1) {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .keywordIdea .volume {
+      text-align: right;
+      font-weight: 600;
+      color: #000;
+      font-size: .8rem;
+    }
+
+    .keywordIdea .view-all {
+      display: inline-block;
+      font-size: 13px;
+      color: #e84e0f;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    .keywordIdea .view-all:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+      .keywordIdea .col {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+      }
+      .keywordIdea .col:last-child {
+        border-bottom: none;
+      }
+    }
