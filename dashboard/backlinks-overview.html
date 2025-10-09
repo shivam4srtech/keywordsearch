@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <!-- ApexCharts -->
+     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/global.css">
+    <link rel="stylesheet" href="../stylesheet/dashboard.css">
+</head>
+<body>
+    <nav class="nav headerNav">
+        <!-- Mobile Nav Toggle -->
+        <button class="navOpenBtn" aria-label="Open Navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 
+                        14.3 32 32s-14.3 32-32 32L32 128C14.3 
+                        128 0 113.7 0 96zM0 256c0-17.7 14.3-32 
+                        32-32l384 0c17.7 0 32 14.3 32 32s-14.3 
+                        32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 
+                        416c0 17.7-14.3 32-32 32L32 448c-17.7 
+                        0-32-14.3-32-32s14.3-32 32-32l384 
+                        0c17.7 0 32 14.3 32 32z"></path>
+            </svg>
+        </button>
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <svg width="240" height="40" viewBox="0 0 350 60" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .brand { font: bold 32px sans-serif; fill: #FF5E29; }
+                    .by { font: 16px sans-serif; fill: #000; }
+                    .labsBox { font: bold 16px sans-serif; fill: #FF5E29; }
+                    .labsText { font: 16px sans-serif; fill: #000; }
+                </style>
+                <text x="0" y="40" class="brand">TrafficMatrics</text>
+                <text x="220" y="40" class="by">by</text>
+                <rect x="260" y="20" width="35" height="25" rx="2" ry="2" 
+                    stroke="#FF5E29" fill="none" stroke-width="2"></rect>
+                <text x="268" y="38" class="labsBox">SR</text>
+                <text x="315" y="40" class="labsText">Labs</text>
+            </svg>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+
+            <button class="navCloseBtn" aria-label="Close Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 
+                            4.1L192 206 56.6 43.5C45.3 29.9 25.1 
+                            28.1 11.5 39.4S-3.9 70.9 7.4 
+                            84.5L150.3 256 7.4 427.5c-11.3 
+                            13.6-9.5 33.8 4.1 45.1s33.8 
+                            9.5 45.1-4.1L192 306 327.4 
+                            468.5c11.3 13.6 31.5 15.4 45.1 
+                            4.1s15.4-31.5 4.1-45.1L233.7 
+                            256 376.6 84.5z"></path>
+                </svg>
+            </button>
+
+            <li><a class="link-hover" href="/">Home</a></li>
+            <li><a class="link-hover" href="/stores">Stores</a></li>
+            <li><a class="link-hover" href="/blog">Blog</a></li>
+            <li><a class="link-hover" href="/category">Category</a></li>
+        </ul>
+
+        <!-- Header Buttons -->
+        <div class="headerBtns">
+            <a href="/login" class="btnLogin">Login</a>
+            <a href="/register" class="btnRegister">Get Started</a>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-box">
+            <div>
+                <div class="sc-eDvSVe jifbFL">
+                    <span class="sc-hLBbgP gAvAzt">
+                        <input type="text" placeholder="Search Store" name="" 
+                            class="sc-gswNZR hZKXxZ" value="">
+                        <span class="sc-dkrFOg hxYWBf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" 
+                                fill="#2f3c97" class="fa fa-search search-icon" viewBox="0 0 20 20">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 
+                                        0-1.397 1.398h-.001q.044.06.098.115l3.85 
+                                        3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 
+                                        1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 
+                                        1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                            </svg>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <aside class="dashbaordSideBar">
+        <div class="add-project" data-bs-toggle="modal" data-bs-target="#websiteModal">+ Add Project</div>
+        <div class="menuBox">
+            <ul class="menu">
+                <li><a href="#">Dashboard</a></li>
+                <li> <a href="#">AI Search Visibility</a> <span class="new-badge">NEW!</span></li>
+                <li> <a href="#">Site Audit</a></li>
+                <li><a href="#">SEO Opportunities</a></li>
+                <li> <a href="#">Rank Tracking</a></li>
+                <li> <a href="#">Competitor Analysis</a></li>
+            
+            </ul>
+            <div class="divider">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-list-search "><path d="M15 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M18.5 18.5l2.5 2.5"></path><path d="M4 6h16"></path><path d="M4 12h4"></path><path d="M4 18h4"></path></svg></span>
+                <span>Keyword Research</span>
+            </div>
+            <ul class="menu">
+                <li> <a href="#">Keyword Overview</a></li>
+                <li> <a href="#">Bulk Analysis</a></li>
+                <li> <a href="#">Keywords Generator</a></li>
+                <li> <a href="#">Keyword Lists</a></li>
+                <li> <a href="#">Keyword Visualization</a></li>
+            </ul>
+            <div class="divider">
+                <span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        class="tabler-icon tabler-icon-activity"
+                        >
+                        <path d="M3 12h4l3 8l4 -16l3 8h4" />
+                    </svg>
+                </span>
+                <span>Competitive Research</span>
+            </div>
+            <ul class="menu">
+                <li class="active"> <a href="#">Traffic Overview</a></li>
+                <li> <a href="#">Bulk Analysis</a></li>
+            </ul>
+        </div>
+        <div class="trial-box">
+            <h3>Free trial available</h3>
+            <ul>
+                <li>Track more keywords</li>
+                <li>Increase daily limits</li>
+                <li>Get more search results</li>
+            </ul>
+            <button class="trial-btn">Start a 7-Day Trial</button>
+        </div>
+    </aside>
+    <div class="dashboardContent">
+        <form class="searchBox row">
+            <div class="col-lg-8">
+                <div class="inputset">
+                <input type="text" class="form-control" placeholder="Enter a domain or URL (ie. hello.com or hello.com/blogs ) " />
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="inputset">
+                    <div class="custom-dropdown">
+                    <div class="dropdown-selected form-control">
+                        
+                        <span>Domain</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1L6 6L11 1" stroke="#555" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <div class="dropdown-list">
+                        
+                        <ul>
+                            <li data-value="domain">Domain</li>
+                            <li data-value="exact URL">Exact URL</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-2">
+                <div class="inputset">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+        <!--  -->
+        <div class="notSubscribed">
+            <div class="one">
+                You're using a free version of Ubersuggest.
+            </div>
+            <span>|</span>
+            <div class="two">
+                <strong>2 </strong>out of <strong>3</strong> free daily searches available
+            </div>
+            <div class="three">
+                <button>UPGRADE</button>
+            </div>
+        </div>
+        <!-- {/*  */} -->
+        <div class="h1Box">
+        <h1><strong>Backlinks :</strong>scoopreview.com</h1>
+        <div class="dnwlFeedback">
+            <a href="#"> 
+                <img
+                src="../images/feedback.svg"
+                width="24"
+                height="24"
+                alt="feedback"
+                />
+            </a>
+            <a href="">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
+                    >
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                    <path d="M7 11l5 5l5 -5" />
+                    <path d="M12 4l0 12" />
+                    </svg> 
+            </a>
+        </div>
+        </div>
+        <!-- {/*  */} -->
+        <div class="traffixCardBox">
+            <div class="row row-cols row-cols-md-3 row-cols-1">
+                <div class="col mb-4 mobilePadZero">
+                    <div class="trafficCard seoFlex" style="min-height: 120px;">
+                        <div class="key">DOMAIN AUTHORITY</div>
+                        <h2>
+                            77 <span class="cardBadge success-badge">GREAT</span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="col mb-4 mobilePadZero">
+                <div class="trafficCard seoFlex" style="min-height: 120px;">
+                    <div class="key">REFERRING DOMAINS</div>
+                    <h2>
+                        119 <span class="cardBadge success-badge">GREAT</span>
+                    </h2>
+                </div>
+                </div>
+                <div class="col mb-4 mobilePadZero">
+                    <div class="trafficCard seoFlex" style="min-height: 120px;">
+                        <div class="key">BACKLINKS</div>
+                        <h2>
+                            3,123 <span class="cardBadge success-badge">GREAT</span>
+                        </h2>
+                        <small>NoFollow: 37,645</small>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+        <!-- backlinks over time -->
+        <div class="chartTabwrapper mb-3">
+              <div class="flexHeader">
+                  <h2 class="sectionHeading">BACKLINKS OVER TIME</h2>
+              </div>
+              <div class="text-right flexSqBox">
+                    <div class="flexSq"><span style="background-color: #ff8486;"></span>Backlinks</div>
+                     <div class="flexSq"><span style="background-color: #f5e368;"></span>Referring Domains</div>
+                    <button>
+                            <svg
+                            
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
+                            >
+                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                            <path d="M7 11l5 5l5 -5" />
+                            <path d="M12 4l0 12" />
+                            </svg> 
+                    </button>
+              </div>
+              <div id="backlinksChart"></div>     
+        </div>
+        <!-- new vs lost domain-->
+        <div class="chartTabwrapper mb-3">
+              <div class="flexHeader">
+                  <h2 class="sectionHeading">Referring Domains (New vs Lost)</h2>
+              </div>
+              <div class="text-right flexSqBox">
+                    <button>
+                            <svg
+                            
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
+                            >
+                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                            <path d="M7 11l5 5l5 -5" />
+                            <path d="M12 4l0 12" />
+                            </svg> 
+                    </button>
+              </div>
+              <div id="referringDomainsChart"></div>     
+        </div>
+        <div class="chartTabwrapper mb-3">
+            <div class="row row-cols-lg-2 row-cols-1">
+                <div class="col">
+                    <div class="flexHeader">
+                        <h2 class="sectionHeading">REFERRING DOMAINS BY DA</h2>
+                        <div class="text-right flexSqBox">
+                            <button>
+                                    <svg
+                                    
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    class="tabler-icon tabler-icon-download tw-text-orange-500 tw-size-6"
+                                    >
+                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+                                    <path d="M7 11l5 5l5 -5" />
+                                    <path d="M12 4l0 12" />
+                                    </svg> 
+                            </button>
+                        </div>    
+                    </div>
+                    <div id="referringDomainsDA"></div>  
+                </div>
+                <div class="col">
+                    <div class="tableContainer">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Anchor Text</th>
+                                    <th>Backlinks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                                  <tr>
+                                      <td>https://scoopreview.com/</td>
+                                      <td>436</td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="anchorDestribution">
+                        <a href="#">View All Anchor Text Distribution</a>
+                    </div>
+                </div>    
+            </div>     
+        </div>
+        <!-- list backlinks -->
+        <div class="listingBacklinks">
+            <div class="flexHeader mb-2">
+                  <h2 class="sectionHeading">Backlinks  <small>1 - 92 [46,333]</small></h2>
+                  <div>
+                       <button class="exportcsv">Export to CSV</button>
+                  </div>
+            </div>
+            <div class="searchFilter mb-3">
+                <div class="searchInput">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"></path>
+                    </svg>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <div class="filters">
+                    <div class="btnset">
+                        <button>All Links</button>
+                        <button class="active">Follow</button>
+                        <button>No Follow</button>
+                    </div>
+                    <div class="oneLinkPerDomain">
+                        <button class="active">One Link per domain</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tableContainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source Page Title & URL | Target Page</th>
+                            <th>Domain Authority</th>
+                            <th>Page Authority</th>
+                            <th>Spam Score</th>
+                            <th>Anchor Text</th>
+                            <th>First Seen</th>
+                            <th>Last Seen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="mb-1">
+                                    <a href="#">Redirect Notice</a>
+                                </div>
+                                <div class="notice mb-1">
+                                    <strong>Source:</strong>
+                                    <span>google.com/ <a href="#"><img src="../images/redirect.svg" alt="redirect"></a></span>
+                                </div>
+                                <div class="notice">
+                                    <strong>Target:</strong>
+                                    <span>scoopreview.com <a href="#"><img src="../images/redirect.svg" alt="redirect"></a></span>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td>58</td>
+                            <td class="spamScore">8%</td>
+                            <td>http://scoopreview.com/</td>
+                            <td>07/17/2021</td>
+                            <td>10/09/2021</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="mb-1">
+                                    <a href="#">Redirect Notice</a>
+                                </div>
+                                <div class="notice mb-1">
+                                    <strong>Source:</strong>
+                                    <span>google.com/ <a href="#"><img src="../images/redirect.svg" alt="redirect"></a></span>
+                                </div>
+                                <div class="notice">
+                                    <strong>Target:</strong>
+                                    <span>scoopreview.com <a href="#"><img src="../images/redirect.svg" alt="redirect"></a></span>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td>58</td>
+                            <td class="spamScore">8%</td>
+                            <td>http://scoopreview.com/</td>
+                            <td>07/17/2021</td>
+                            <td>10/09/2021</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="mb-1">
+                                    <a href="#">Redirect Notice</a>
+                                </div>
+                                <div class="notice mb-1">
+                                    <strong>Source:</strong>
+                                    <span>google.com/ <a href="#"><img src="../images/redirect.svg" alt="redirect"></a></span>
+                                </div>
+                                <div class="notice">
+                                    <strong>Target:</strong>
+                                    <span>scoopreview.com <a href="#"><img src="../images/redirect.svg" alt="redirect"></a></span>
+                                </div>
+                            </td>
+                            <td>100</td>
+                            <td>58</td>
+                            <td class="spamScore">8%</td>
+                            <td>http://scoopreview.com/</td>
+                            <td>07/17/2021</td>
+                            <td>10/09/2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>    
+        <!-- pagination -->
+        <div class="paginationBox">
+           <a href="#" class="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </a>
+
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#" class="active">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+
+            <div class="pageInput">
+                <span>Go to</span>
+                <input type="number" min="1" placeholder="Page" />
+            </div>
+
+            <a href="#" class="next">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </div>
+      <!-- Add website Modal  -->
+      <div class="modal fade customeModal" id="websiteModal" tab-index="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <div>
+                  <h5 class="modal-title">Add your website</h5>
+                  <div class="modal-subtitle">Add website and select where do you want to rank</div>
+                  </div>
+              
+              </div>
+
+              <div class="modal-body">
+                  <input type="text" class="form-control" placeholder="Website URL" />
+
+                  <div class="lang-box">
+                  <div class="lang-text">
+                       <img
+                        src="../images/us.svg"
+                        width="24"
+                        height="24 "
+                        alt="flag" 
+                        />
+                      English <span>(United States)</span>
+                  </div>
+                  <div class="lang-action" data-bs-toggle="modal" data-bs-target="#langAndLocation">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="16">     
+                          <path d="M416.9 85.2L372 130.1L509.9 268L554.8 223.1C568.4 209.6 576 191.2 576 172C576 152.8 568.4 134.4 554.8 120.9L519.1 85.2C505.6 71.6 487.2 64 468 64C448.8 64 430.4 71.6 416.9 85.2zM338.1 164L122.9 379.1C112.2 389.8 104.4 403.2 100.3 417.8L64.9 545.6C62.6 553.9 64.9 562.9 71.1 569C77.3 575.1 86.2 577.5 94.5 575.2L222.3 539.7C236.9 535.6 250.2 527.9 261 517.1L476 301.9L338.1 164z" />
+                      </svg>
+                  </div>
+                  </div>
+
+                  <div class="free-trial">
+                  <a href="#">Start 7-day free trial</a> to add 2 or more locations.
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn-submit">Add Website</button>
+              </div>
+              </div>
+          </div>
+      </div>
+      <!-- Language and location -->
+      <div class="modal fade customeModal" id="langAndLocation" tab-index="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <div>
+                      <h5 class="modal-title">Language and location</h5>
+                      <button class="dismissModal" data-bs-dismiss="modal">X</button>
+                      
+                  </div>
+              
+              </div>
+
+              <div class="modal-body">
+                  <div class="row align-items-center">
+                      <div class="col-md-5">
+                          <LanguageSelect/>
+                      </div>
+                      <div class="col-md-5">
+                          <CountrySelect/>
+                      </div>
+                        <div class="col-md-2">
+                          <button class="addLang">+ ADD</button>
+                      </div>
+                  </div>
+                  <div class="lang-box">
+                      <div class="lang-text">
+                          <img
+                              src="../images/us.svg"
+                              width="24"
+                              height="24 "
+                              alt="flag" 
+                          />
+                          English <span>(United States)</span>
+                      </div>
+                      <div class="lang-action" title="delete">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="16" fill="#ff0000">
+                              <path d="M232.7 69.9L224 96L128 96C110.3 96 96 110.3 96 128C96 145.7 110.3 160 128 160L512 160C529.7 160 544 145.7 544 128C544 110.3 529.7 96 512 96L416 96L407.3 69.9C402.9 56.8 390.7 48 376.9 48L263.1 48C249.3 48 237.1 56.8 232.7 69.9zM512 208L128 208L149.1 531.1C150.7 556.4 171.7 576 197 576L443 576C468.3 576 489.3 556.4 490.9 531.1L512 208z" />
+                          </svg>
+                      </div>
+                  </div>
+
+                  <div class="free-trial">
+                  <a href="#">Start 7-day free trial</a> to add 2 or more locations.
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn-cancel" data-bs-toggle="modal" data-bs-target="#websiteModal">Cancel</button>
+                  <button type="button" class="btn-submit" data-bs-toggle="modal" data-bs-target="#websiteModal">Update</button>
+              </div>
+              </div>
+          </div>
+      </div> 
+    <footer id="footer">
+        <div class="footer-container">
+
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg width="240" height="40" viewBox="0 0 350 60" xmlns="http://www.w3.org/2000/svg">
+                        <style>
+                            .brand { font: bold 32px sans-serif; fill: #FF5E29; }
+                            .by { font: 16px sans-serif; fill: #000; }
+                            .labsBox { font: bold 16px sans-serif; fill: #FF5E29; }
+                            .labsText { font: 16px sans-serif; fill: #000; }
+                        </style>
+                        <text x="0" y="40" class="brand">TrafficMatrics</text>
+                        <text x="220" y="40" class="by">by</text>
+                        <rect x="260" y="20" width="35" height="25" rx="2" ry="2"
+                            stroke="#FF5E29" fill="none" stroke-width="2"></rect>
+                        <text x="268" y="38" class="labsBox">SR</text>
+                        <text x="315" y="40" class="labsText">Labs</text>
+                    </svg>
+                </div>
+
+                <p>
+                    Unlock the full potential of your website with our comprehensive SEO Portal,
+                    designed to empower businesses and marketers with cutting-edge tools for keyword
+                    research, backlink tracking, and traffic analytics.
+                </p>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+
+                <div>
+                    <h4>Shop</h4>
+                    <a href="#">Medicines &amp; Essentials</a>
+                    <a href="#">Wellness Products</a>
+                    <a href="#">Personal Care</a>
+                    <a href="#">Fitness &amp; Nutrition</a>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <a href="#">Health Checkup Packages</a>
+                    <a href="#">Doctor Consultations</a>
+                    <a href="#">Lab Tests</a>
+                    <a href="#">Pharmacy Offers</a>
+                </div>
+
+                <div>
+                    <h4>Support</h4>
+                    <a href="#">FAQs</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copybox">
+            <p class="copyright text-center">
+                © 2025 TrafficMatrics All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../js/global.js"></script>
+    <script src="../appexChart/backlinksChart.js"></script>
+    <script src="../appexChart/new-and-lost-reffering-domain.js"></script>
+    <script src="../appexChart/reffering-domain-by-da.js"></script>
+</body>
+</html>

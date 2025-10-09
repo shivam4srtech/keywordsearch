@@ -555,17 +555,32 @@ color: var(--secondary-color);
   font-weight: 600;
   font-size: .7rem;
 }
-.tableContainer table tbody tr:nth-child(odd){
+.tableContainer table tbody tr:nth-child(even){
  background-color: #f8f8f8;
 }
 
+.tableContainer td.spamScore{
+  background-color: rgba(133, 236, 193, 0.2);
+  text-align: center;
+}
 
 .tableContainer td {
   color: #444;
   font-weight: 500;
   font-size: .7rem;
 }
-
+.sectionHeading small{
+  font-size: .8rem;
+}
+.flexHeader .exportcsv{
+  outline: none;
+  padding: .5rem;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: transparent;
+  font-weight: 500;
+  font-size: .8rem;
+}
 /* SEO title column */
 .tableContainer td a {
   color: #ff5a2c;
@@ -2014,4 +2029,116 @@ border-radius: 0;
 .keywordResult .exportBtn:hover {
   background: #ff5722;
   color: #fff;
+}
+.anchorDestribution  a{
+  color: var(--secondary-color);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  font-size: .8rem;
+  display: block;
+  margin-top: 1rem;
+}
+.searchFilter{
+  display: flex;
+  justify-content: space-between;
+}
+.searchFilter .searchInput{
+  display: flex;
+  width: 400px;
+  height: 40px;
+  border: 1px solid rgb(232, 235, 236);
+  border-radius: 2px;
+  padding: .5rem;
+  gap: 5px;
+}
+.searchFilter .searchInput .form-control{
+ box-shadow: none;
+ border: none;
+ outline: none;
+ font-size: .8rem;
+ font-weight: 500;
+ padding: 0;
+}
+.searchFilter .searchInput svg{
+ width: 16px;
+ fill: #444;
+}
+.searchFilter .filters{
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+.searchFilter .filters .btnset{
+ display: flex;
+ align-items: center;
+ gap: 0;
+
+}
+.searchFilter .filters .btnset button{
+border:1px solid rgb(232, 235, 236);
+outline: none;
+border-radius: 0;
+height:40px;
+display: inline-flex;
+align-items: center;
+ background-color: transparent;
+ font-weight: 500;
+ padding: 0 .8rem;
+ font-size: .8rem;
+ color: rgb(143, 143, 143);
+ text-transform: uppercase;
+ letter-spacing: .5px;
+ border-right: none;
+}
+.searchFilter .filters .btnset button.active{
+ background-color: var(--secondary-color);
+ color: #fff;
+ border: 1px solid var(--secondary-color);
+}
+.searchFilter .filters .btnset button:last-child{
+  border-right: 1px solid rgb(232, 235, 236);
+}
+.oneLinkPerDomain button{
+  border:1px solid rgb(232, 235, 236);
+outline: none;
+border-radius: 0;
+height:40px;
+display: inline-flex;
+align-items: center;
+ background-color: transparent;
+ font-weight: 500;
+ padding: 0 .8rem;
+ font-size: .8rem;
+ color: rgb(143, 143, 143);
+ text-transform: uppercase;
+ letter-spacing: .5px;
+}
+.oneLinkPerDomain button.active{
+ background-color: var(--secondary-color);
+ color: #fff;
+ border: 1px solid var(--secondary-color);
+}
+
+@media(max-width:991px){
+  .searchFilter {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media(max-width:650px){
+  .searchFilter .searchInput {
+    width: 100%;
+  }
+}
+@media(max-width:500px){
+ .searchFilter .filters .btnset button{
+  font-size: .6rem;
+ }
+ .searchFilter .searchInput svg{
+  width: 24px;
+ }
+ .oneLinkPerDomain button{
+  font-size: .6rem;
+ }
 }
